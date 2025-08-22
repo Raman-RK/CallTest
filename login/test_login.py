@@ -42,6 +42,8 @@ class TestLogin:
         lp.wait_for_visibility_of_element()
         dp.accept_welcome()
         dp.click_dialer_icon()
+        dp.enter_phone_number()
+        s_phone = self.credentials_manager.
         time.sleep(20)
 
 

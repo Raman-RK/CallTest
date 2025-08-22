@@ -23,3 +23,5 @@ class CredentialManager:
             print(f"Error{e}")
             return None
 
+    def get_phon
+
