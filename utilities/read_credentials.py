@@ -23,5 +23,12 @@ class CredentialManager:
             print(f"Error{e}")
             return None
 
-    def get_phon
+    def get_phone(self, role):
+        try:
+            number_key = f"{role}_number"
+            return self.config.get('numbers', number_key)
+        except(configparser.NoSectionError, configparser.NoOptionError) as e:
+            print(f"error{e}")
+            return None
+
 

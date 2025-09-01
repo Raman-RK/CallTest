@@ -1,4 +1,19 @@
 dialer_icon = "//div[2]/div[2]/button/span"
 welcome_msg = 'div.flex.justify-center.mt-4 > button' # to be used in dashboard
 phone_input = 'input[maxlength="15"]'
-
+dial_icon = '[class="main-keypad-circle"] svg'
+disconnect_icon = '[class="connected-frame-call-end-circle"]'
+unmute_icon_xpath  = '//div[@class="connected-frame-action-box"]//p[text()="Unmute"]'
+mute_icon_xpath = '//div[@class="connected-frame-action-box"]//p[text()= "Mute"]'
+hold_icon_xpath = '//div[@class="connected-frame-action-box"]//p[text()= "Hold"]'
+keypd_icon_xpath = '//div[@class="connected-frame-action-box"]//p[text()= "Keypad"]'
+speaker_icon_xpath = '//div[@class="connected-frame-action-box"]//p[text()= "Speaker"]'
+record_icon_xpath = '//div[@class="connected-frame-action-box"]//p[text()= "Record"]'
+transfer_icon_xpath = '//div[@class="connected-frame-action-box"]//p[text()= "Transfer"]'
+notes_icon_xpath = '//div[@class="connected-frame-action-box"]//p[text()= "Notes"]'
+schedule_call_back = '//div[@class="call-duration-frame"] /following-sibling::div//span[text()="Schedule Callback"]'
+notes_after_call = '//div[@class="call-duration-frame"] /following-sibling::div//span[text()="Notes"]'
+call_again = '//div[@class="call-duration-frame"] /following-sibling::div//span[text()="Call Again"]'
+call_duration = '(//div[@class="call-duration-frame"] //p)[1]'
+back_icon ='[class="undefined"]'
+add_fund = ''

@@ -9,6 +9,15 @@ from webdriver_manager.chrome import ChromeDriverManager  # This will help manag
 @pytest.fixture(scope="function")
 def setup(request):
     options = webdriver.ChromeOptions()
+    prefs = {
+        "profile.default_content_setting_values.media_stream_mic":1,
+        "profile.default_content_settings_value.media_stream_camera":1,
+        "profile.default_content_setting_values.geolocation": 1,
+        "profile.default_content_setting_values.notifications": 1,
+    }
+    options.add_experimental_option("prefs", prefs)
+    options.add_argument("--use-fake-ui-for-media-stream")
+
     chromedriver_path = ChromeDriverManager().install()
     service = Service(chromedriver_path)
     driver = webdriver.Chrome(service=service, options=options)
