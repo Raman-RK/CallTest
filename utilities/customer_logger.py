@@ -2,6 +2,7 @@ import logging
 import inspect
 import os
 
+
 class ColoredFormatter(logging.Formatter):
     COLORS = {
         'DEBUG': '\033[94m',
@@ -12,10 +13,11 @@ class ColoredFormatter(logging.Formatter):
         'ENDC': '\033[0m'
     }
 
-    def format(self,record):
-        log_level =record.levelname
+    def format(self, record):
+        log_level = record.levelname
         msg = super().format(record)
         return f"{self.COLORS.get(log_level, '')}{msg}{self.COLORS['ENDC']}"
+
 
 class LogGen:
     @staticmethod
